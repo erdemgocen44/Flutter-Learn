@@ -30,7 +30,18 @@ class TextLearnView extends StatelessWidget {
             Text(
               "Buy the best one! $name  ${name.length}",
               style: ProjectStyles.welcomeStyle,
-
+              maxLines: 2,
+              overflow: TextOverflow
+                  .ellipsis, //fazla satır için yandan 3 nokta bırakma...
+              textAlign: TextAlign.center,
+              textScaleFactor: 2.0,
+            ),
+            Text(
+              "Buy the best one! $name  ${name.length}",
+              style: Theme.of(context)
+                  .textTheme
+                  .headline5
+                  ?.copyWith(color: Colors.red),
               maxLines: 2,
               overflow: TextOverflow
                   .ellipsis, //fazla satır için yandan 3 nokta bırakma...
