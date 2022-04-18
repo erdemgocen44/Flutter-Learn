@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TextLearnView extends StatelessWidget {
-  const TextLearnView({Key? key, required this.title}) : super(key: key);
+  const TextLearnView({Key? key, required this.title, required this.username})
+      : super(key: key);
   final String title;
   final String name = 'veli';
+  final String username;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +50,7 @@ class TextLearnView extends StatelessWidget {
               textAlign: TextAlign.center,
               textScaleFactor: 2.0,
             ),
+            Text(username ?? ''),
           ],
         ),
       ),
