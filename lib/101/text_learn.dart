@@ -13,6 +13,7 @@ class TextLearnView extends StatelessWidget {
         child: Column(
           children: [
             Text(
+              //en baz hali bu olmalı ama bu projelerde kullanılmaz
               "Buy the best one! $name  ${name.length}",
               style: const TextStyle(
                 decoration: TextDecoration.underline, //altını çizmek için
@@ -30,6 +31,7 @@ class TextLearnView extends StatelessWidget {
               textScaleFactor: 2.0,
             ),
             Text(
+              //bu kısmen daha iyi ama yeterli değil
               "Buy the best one! $name  ${name.length}",
               style: ProjectStyles.welcomeStyle,
               maxLines: 2,
@@ -39,11 +41,12 @@ class TextLearnView extends StatelessWidget {
               textScaleFactor: 2.0,
             ),
             Text(
+              //olması gereken bu
               "Buy the best one! $name  ${name.length}",
               style: Theme.of(context)
                   .textTheme
                   .headline5
-                  ?.copyWith(color: Colors.red),
+                  ?.copyWith(color: ProjectColors.welcomeColor),
               maxLines: 2,
               overflow: TextOverflow
                   .ellipsis, //fazla satır için yandan 3 nokta bırakma...
@@ -68,4 +71,8 @@ class ProjectStyles {
     fontWeight: FontWeight.w600,
     color: Colors.lime,
   );
+}
+
+class ProjectColors {
+  static Color welcomeColor = Colors.red;
 }
