@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class TextLearnView extends StatelessWidget {
-  const TextLearnView({Key? key, required this.title, required this.username})
-      : super(key: key);
+  TextLearnView({
+    Key? key,
+    required this.title,
+    required this.username,
+  }) : super(key: key);
   final String title;
   final String name = 'veli';
   final String username;
+  final ProjectKeys keys = ProjectKeys();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +18,7 @@ class TextLearnView extends StatelessWidget {
           children: [
             Text(
               //en baz hali bu olmalı ama bu projelerde kullanılmaz
-              "Buy the best one! $name  ${name.length}",
+              "Bu tercih etmediğimiz kullanım şekli $name  ${name.length}",
               style: const TextStyle(
                 decoration: TextDecoration.underline, //altını çizmek için
                 fontSize: 16,
@@ -22,7 +26,7 @@ class TextLearnView extends StatelessWidget {
                 wordSpacing: 2,
                 letterSpacing: 2,
                 fontWeight: FontWeight.w600,
-                color: Colors.lime,
+                color: Colors.blueAccent,
               ),
               maxLines: 2,
               overflow: TextOverflow
@@ -32,7 +36,7 @@ class TextLearnView extends StatelessWidget {
             ),
             Text(
               //bu kısmen daha iyi ama yeterli değil
-              "Buy the best one! $name  ${name.length}",
+              "İyi ama yeterli değil $name  ${name.length}",
               style: ProjectStyles.welcomeStyle,
               maxLines: 2,
               overflow: TextOverflow
@@ -54,6 +58,7 @@ class TextLearnView extends StatelessWidget {
               textScaleFactor: 2.0,
             ),
             Text(username ?? ''),
+            Text(keys.welcome),
           ],
         ),
       ),
@@ -75,4 +80,8 @@ class ProjectStyles {
 
 class ProjectColors {
   static Color welcomeColor = Colors.red;
+}
+
+class ProjectKeys {
+  final String welcome = "Merhaba";
 }

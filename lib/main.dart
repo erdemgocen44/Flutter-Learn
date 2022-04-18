@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
-      home: const TextLearnView(
+      home: TextLearnView(
         title: 'Text Learn',
+        username: 'Username',
       ),
     );
   }
