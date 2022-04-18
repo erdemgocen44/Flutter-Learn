@@ -14,7 +14,7 @@ class ContainerSizedBoxLearn extends StatelessWidget {
             width: 300,
             child: Text("a" * 500),
           ),
-          SizedBox
+          const SizedBox
               .shrink(), //ekranda sadece boş bir alan oluşturmak istediğimizde kullanıyoruz
           SizedBox.square(
             dimension: 50, //50*50lik bir kare yapar
