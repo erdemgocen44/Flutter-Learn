@@ -24,7 +24,11 @@ class ContainerSizedBoxLearn extends StatelessWidget {
             width: 50,
             height: 50,
             color: Colors.redAccent,
-            constraints: const BoxConstraints(maxWidth: 100),
+            constraints: const BoxConstraints(
+                maxHeight: 100,
+                maxWidth: 100,
+                minWidth:
+                    50), //componentin genişlemesi için verilir .bu sayede container verilen değerlere göre kenndi kendine byuyup kuculebilir.
             child: Text('Di' * 25),
           ),
         ],
