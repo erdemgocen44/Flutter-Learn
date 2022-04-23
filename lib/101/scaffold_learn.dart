@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/101/container_sized_box_learn.dart';
 
 class ScaffoldLearnView extends StatelessWidget {
   const ScaffoldLearnView({Key? key}) : super(key: key);
@@ -11,12 +12,21 @@ class ScaffoldLearnView extends StatelessWidget {
         title: Text("Scaffold Samples"),
       ),
       body: const Center(child: Text("Merhaba")),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.read_more), label: "read"),
-        BottomNavigationBarItem(icon: Icon(Icons.mail_outline), label: "mail")
-      ]),
+      bottomNavigationBar: Container(
+        decoration: ProjectContainerDecoration(),
+        child: BottomNavigationBar(items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.read_more), label: "read"),
+          BottomNavigationBarItem(icon: Icon(Icons.mail_outline), label: "mail")
+        ]),
+      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) => Container(
+                    height: 200,
+                  ));
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       drawer: const Drawer(),
