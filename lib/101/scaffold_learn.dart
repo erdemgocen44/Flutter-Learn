@@ -6,13 +6,19 @@ class ScaffoldLearnView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Scaffold Samples"),
-        ),
-        body: const Text("Merhaba"),
-        bottomNavigationBar: BottomNavigationBar(items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.read_more), label: "read"),
-          BottomNavigationBarItem(icon: Icon(Icons.mail_outline), label: "mail")
-        ]));
+      backgroundColor: Colors.amber,
+      appBar: AppBar(
+        title: Text("Scaffold Samples"),
+      ),
+      body: const Center(child: Text("Merhaba")),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.read_more), label: "read"),
+        BottomNavigationBarItem(icon: Icon(Icons.mail_outline), label: "mail")
+      ]),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
   }
 }
