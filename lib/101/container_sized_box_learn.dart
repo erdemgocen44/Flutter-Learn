@@ -30,23 +30,23 @@ class ContainerSizedBoxLearn extends StatelessWidget {
             child: Text('Di' * 25),
             padding: const EdgeInsets.all(10),
             margin: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              gradient: const LinearGradient(
-                  colors: [Colors.blue, Colors.amberAccent]),
-              border: Border.all(width: 10, color: Colors.white12),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.green,
-                    offset: Offset(0.1, 1),
-                    blurRadius: 12),
-              ],
-            ),
+            decoration: ProjectUtility.boxDecoration,
           ),
         ],
       ),
     );
   }
+}
+
+class ProjectUtility {
+  static BoxDecoration boxDecoration = BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    gradient: const LinearGradient(colors: [Colors.blue, Colors.amberAccent]),
+    border: Border.all(width: 10, color: Colors.white12),
+    boxShadow: [
+      BoxShadow(color: Colors.green, offset: Offset(0.1, 1), blurRadius: 12),
+    ],
+  );
 }
 
 class ProjectContainerDecoration extends BoxDecoration {
