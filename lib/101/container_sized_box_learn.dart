@@ -23,13 +23,33 @@ class ContainerSizedBoxLearn extends StatelessWidget {
           Container(
             width: 50,
             height: 50,
-            color: Colors.redAccent,
+
             constraints: const BoxConstraints(
                 maxHeight: 100,
-                maxWidth: 100,
+                maxWidth: 150,
                 minWidth:
-                    50), //componentin genişlemesi için verilir .bu sayede container verilen değerlere göre kenndi kendine byuyup kuculebilir.
+                    100), //componentin genişlemesi için verilir .bu sayede container verilen değerlere göre kenndi kendine byuyup kuculebilir.
             child: Text('Di' * 25),
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.redAccent,
+              shape: BoxShape.circle,
+              border: Border.all(
+                width: 10,
+                color: Colors.blueGrey,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.green,
+                  offset: Offset(0.1, 1),
+                  blurRadius: 12,
+                ),
+              ],
+              gradient: LinearGradient(
+                colors: [Colors.blue, Colors.amberAccent],
+              ),
+            ),
           ),
         ],
       ),
