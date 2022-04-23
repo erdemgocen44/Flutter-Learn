@@ -31,26 +31,34 @@ class ContainerSizedBoxLearn extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-                color: Colors.redAccent,
-         
-                border: Border.all(
-                  width: 10,
-                  color: Colors.blueGrey,
-                ),
-                boxShadow: [
-                  const BoxShadow(
+              borderRadius: BorderRadius.circular(10),
+              gradient: const LinearGradient(
+                  colors: [Colors.blue, Colors.amberAccent]),
+              border: Border.all(width: 10, color: Colors.white12),
+              boxShadow: [
+                BoxShadow(
                     color: Colors.green,
                     offset: Offset(0.1, 1),
-                    blurRadius: 12,
-                  ),
-                ],
-                gradient: const LinearGradient(
-                  colors: [Colors.blue, Colors.amberAccent],
-                ),
-                borderRadius: BorderRadius.circular(10)),
+                    blurRadius: 12),
+              ],
+            ),
           ),
         ],
       ),
     );
   }
+}
+
+class ProjectContainerDecoration extends BoxDecoration {
+  ProjectContainerDecoration()
+      : super(
+          borderRadius: BorderRadius.circular(10),
+          gradient:
+              const LinearGradient(colors: [Colors.blue, Colors.amberAccent]),
+          border: Border.all(width: 10, color: Colors.white12),
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.green, offset: Offset(0.1, 1), blurRadius: 12)
+          ],
+        );
 }
