@@ -19,6 +19,7 @@ class ScaffoldLearnView extends StatelessWidget {
         onPressed: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      drawer: const Drawer(),
     );
   }
 }
