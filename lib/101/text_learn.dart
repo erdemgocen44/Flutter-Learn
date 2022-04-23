@@ -57,7 +57,7 @@ class TextLearnView extends StatelessWidget {
               textAlign: TextAlign.center,
               textScaleFactor: 2.0,
             ),
-            Text(username ?? ''),
+            Text('Akif'),
             Text(keys.welcome),
           ],
         ),
