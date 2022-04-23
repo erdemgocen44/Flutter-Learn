@@ -19,8 +19,14 @@ class ContainerSizedBoxLearn extends StatelessWidget {
           SizedBox.square(
             dimension: 50, //50*50lik bir kare yapar.
             child: Text("ss" * 50),
-          ), //bu kullanımda sadec kare bir alan istediğimizde yapıyoruz
-          Container(),
+          ), //bu kullanımda sadece kare bir alan istediğimizde yapıyoruz
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.redAccent,
+            constraints: const BoxConstraints(maxWidth: 100),
+            child: Text('Di' * 25),
+          ),
         ],
       ),
     );
