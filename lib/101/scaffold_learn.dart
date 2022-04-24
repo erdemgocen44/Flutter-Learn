@@ -9,7 +9,7 @@ class ScaffoldLearnView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber,
       appBar: AppBar(
-        title: Text("Scaffold Samples"),
+        title: const Text("Scaffold Samples"),
       ),
       body: const Center(child: Text("Merhaba")),
       bottomNavigationBar: Container(
