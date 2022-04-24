@@ -14,12 +14,20 @@ class ButtonLearnView extends StatelessWidget {
               child: const Text("Text Button"),
               onPressed: () {},
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Elevated Button')),
+            ElevatedButton(
+                onPressed:
+                    () {}, //eğer bu butonun tıklanamaz olmasını istersek onPressed'i null yaparız ve tıklanabilirliği kalkar
+                child: Text('Elevated Button')),
             IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.chrome_reader_mode_outlined)),
             FloatingActionButton(
                 onPressed: () {}, child: const Icon(Icons.add)),
+
+            InkWell(
+                onTap: () {},
+                child: const Text(
+                    'custom button')), //tasarımda buttonun padding i olmasın sadece tıklanabilen bir alan olsun istersek bunu kullanırız
           ],
         ),
       ),
