@@ -11,7 +11,17 @@ class ButtonLearnView extends StatelessWidget {
         child: Column(
           children: [
             TextButton(
-              child: const Text("Text Button"),
+              child: Text(
+                "Text Button",
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
+              style: ButtonStyle(backgroundColor:
+                  MaterialStateProperty.resolveWith<Color>((states) {
+                if (states.contains(MaterialState.pressed)) {
+                  return Colors.green;
+                }
+                return Colors.red;
+              })),
               onPressed: () {},
             ),
             ElevatedButton(
@@ -28,6 +38,27 @@ class ButtonLearnView extends StatelessWidget {
                 onTap: () {},
                 child: const Text(
                     'custom button')), //tasarımda buttonun padding i olmasın sadece tıklanabilen bir alan olsun istersek bunu kullanırız
+            Container(
+              height: 200,
+              color: Colors.white,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)))),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 20, bottom: 20, right: 45, left: 45),
+                  child: Text(
+                    'Place Bid',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                )),
           ],
         ),
       ),
