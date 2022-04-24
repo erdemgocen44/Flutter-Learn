@@ -5,6 +5,17 @@ class ButtonLearnView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          TextButton(
+            child: const Text("Text Button"),
+            onPressed: () {},
+          ),
+          ElevatedButton(onPressed: () {}, child: Text('Elevated Button'))
+        ],
+      ),
+    );
   }
 }
