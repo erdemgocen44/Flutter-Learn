@@ -37,7 +37,7 @@ class ButtonLearnView extends StatelessWidget {
             InkWell(
                 onTap: () {},
                 child: const Text(
-                    'custom button')), //tasarımda buttonun padding i olmasın sadece tıklanabilen bir alan olsun istersek bunu kullanırız
+                    'custom button')), //tasarımda butonun padding i olmasın sadece tıklanabilen bir alan olsun istersek bunu kullanırız
             Container(
               height: 200,
               color: Colors.white,
